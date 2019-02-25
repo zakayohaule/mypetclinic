@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Vets</title>
+</head>
+<body>
+    <ul th:each="var : ${model}">
+        <span th:text="${var.key}"></span> => <span th:text="${var.value}"></span>
+    </ul>
+    <h1 th:text="'List of vets'">List of vets...</h1>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="vet : ${vets}">
+            <td th:text="${vet.id}">ID</td>
+            <td th:text="${vet.first_name}">zak</td>
+            <td th:text="${vet.last_name}">b</td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>
